@@ -262,7 +262,7 @@ input[type=reset],
 input[name=submit_reset],
 input.button {
     margin-left: 14px;
-    border: 1px solid #ff533d;
+    border: 1px solid #169;
     padding: 3px 7px;
     color: #fff;
     text-decoration: none;
@@ -274,7 +274,7 @@ input.button {
 
     text-shadow: 0 1px 1px rgba(0,0,0,0.5);
 
-    <?php echo $_SESSION['PMA_Theme']->getCssGradient('d64937', 'ff533d'); ?>
+    <?php echo $_SESSION['PMA_Theme']->getCssGradient('169', '169'); ?>
 }
 
 input[type=submit]:hover,
@@ -535,7 +535,7 @@ td.marked,
 table tr.marked td,
 table tr.marked th,
 table tr.marked {
-    <?php //echo $_SESSION['PMA_Theme']->getCssGradient('ff533d', 'd64937'); ?>
+    <?php //echo $_SESSION['PMA_Theme']->getCssGradient('169', '169'); ?>
     background: #0c0c0c;  
     color: <?php echo $GLOBALS['cfg']['BrowseMarkerColor']; ?>;
     -moz-box-shadow: 0 1px 0 rgba(0,0,0,0.3) inset;
@@ -2080,7 +2080,7 @@ input[type=date].invalid_value,
 .importoptions #buttonGo {
     font-weight: bold;
     margin-<?php echo $left; ?>: 3px;
-    border: 1px solid #ff533d;
+    border: 1px solid #169;
     padding: 5px 12px;
     color: #fff;
     text-decoration: none;
@@ -2092,7 +2092,7 @@ input[type=date].invalid_value,
 
     text-shadow: 0 1px 1px rgba(0,0,0,0.5);
 
-    <?php echo $_SESSION['PMA_Theme']->getCssGradient('d64937', 'ff533d'); ?>
+    <?php echo $_SESSION['PMA_Theme']->getCssGradient('169', '169'); ?>
     cursor: pointer;
 }
 #buttonGo:hover {
@@ -2954,7 +2954,7 @@ fieldset .disabled-field td {
 
 .ui-datepicker-calendar tr td:hover a {
     background: <?php echo $GLOBALS['cfg']['ControlColor']; ?> !important;
-    border-color: #ff533d;
+    border-color: #169;
 }
 
 .saving_edited_data {
@@ -3139,12 +3139,13 @@ div.group.pmagroup li a {
 
 /* PMA Recent tables and favorite tables */
 #pma_quick_warp {
-    position: absolute;
+    position: relative;
     left: -10px;
     right: 0;
-    bottom: 20px;
-    z-index: 999;
+/*    bottom: 20px;
+    z-index: 999; */
     background: rgba(21,21,21,0.9);
+    display:none;
 }
 
 #pma_quick_warp .drop_list > span {
